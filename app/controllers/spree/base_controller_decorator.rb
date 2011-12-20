@@ -20,6 +20,7 @@ Spree::BaseController.class_eval do
       #load @content object to load correct meta_keywords & meta_description
       @content = @page
       
+      @title = @page.title
       if @page.layout && !@page.layout.empty?
         render :template => 'static_content/show', :layout => @page.layout
       else
